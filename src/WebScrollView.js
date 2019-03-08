@@ -12,7 +12,7 @@ export default class WebScrollView extends Component {
   render() {
     const { ListHeaderComponent, ListFooterComponent, data, inverted } = this.props;
     let messages = data;
-    if (!inverted) {
+    if (inverted) {
       messages = data.slice().reverse();
     }
     return (
@@ -32,7 +32,7 @@ const styles = {
     width: '100%',
     overflow: 'auto',
     display: 'flex',
-    flexDirection: 'column-reverse',
+    flexDirection: 'column',
     flex: 1,
     alignItems: 'stretch',
   },
